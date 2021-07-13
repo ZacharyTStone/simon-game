@@ -5,7 +5,7 @@ const buttonColors = ["red", "blue", "green", "yellow"];
 const gamePattern = []
 
 // array containing what the user clicks
-const userClickedPatter[];
+const userClickedPattern = [];
 
 function nextSequence() {
     //function containing a random number generator from 0-3
@@ -19,10 +19,12 @@ function nextSequence() {
     var sequencedButtonSound = new Audio("sounds/" + randomChosenColor + ".mp3");
     sequencedButtonSound.play();
 }
-
+// build up an array of click colors (buttons)
 $(".btn").on("click", function () {
     var userChoosenColor = this.attr("id");
-    console.log
+    console.log(userChoosenColor);
+    // userClickedPattern.push(userChoosenColor);
+    // console.log(userClickedPattern);
 })
 
 

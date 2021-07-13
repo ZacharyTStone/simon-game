@@ -6,6 +6,8 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+
+// starts the game with a keypress
 $(document).keypress(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
@@ -13,6 +15,16 @@ $(document).keypress(function () {
         started = true;
     }
 });
+
+$(".mobile-reset").click(function () {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+    }
+});
+
+
 
 $(".btn").click(function () {
 

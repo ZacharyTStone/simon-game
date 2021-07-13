@@ -6,7 +6,7 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
 }
 
@@ -24,6 +24,21 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+.mobile-reset {
+
+  margin: 25px;
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+  background-color: white;
+  font-family: 'Press Start 2P', cursive;
+  align-items: center;
+
+
 }
 
 .game-over {

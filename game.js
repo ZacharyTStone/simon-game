@@ -7,7 +7,7 @@ var started = false;
 var level = 0;
 
 // game rule alert
-// alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they apeared");
+alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they apeared");
 
 // starts the game with a button click and unhides
 $(".mobile-reset").click(function () {

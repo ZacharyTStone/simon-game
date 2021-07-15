@@ -6,21 +6,18 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+// game rule alert
+// alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they apeared");
 
-// starts the game with a keypress
-$(document).keypress(function () {
-    if (!started) {
-        $("#level-title").text("Level " + level);
-        nextSequence();
-        started = true;
-    }
-});
-
+// starts the game with a button click and unhides
 $(".mobile-reset").click(function () {
     if (!started) {
+        $(".btn").removeClass("hidden");
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
+
+
     }
 });
 
@@ -66,9 +63,11 @@ function checkAnswer(currentLevel) {
         $("body").addClass("game-over");
         setTimeout(function () {
             $("body").removeClass("game-over");
-        }, 200);
+        }, 300);
 
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over");
+
+        $(".btn").addClass("hidden");
 
         //2. Call startOver() if the user gets the sequence wrong.
         startOver();
@@ -77,8 +76,18 @@ function checkAnswer(currentLevel) {
 }
 
 function nextSequence() {
+    // function to repeat last buttons
+    // if (gamePattern != 0) {
+    //     var = Math.floor(Math.random() * 4);
+    //     var randomChosenColor = buttonColors[randomNumber];
+    //     gamePattern.push(randomChosenColor);
 
-    //6. Once nextSequence() is triggered, reset the userClickedPattern to an empty array ready for the next level.
+    //     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
+    //     playSound(randomChosenColor);
+
+    // }
+
+    // game for each level
     userClickedPattern = [];
 
     level++;
@@ -110,4 +119,5 @@ function startOver() {
     gamePattern = [];
     started = false;
     $(h1).removeClass("game-over");
+
 }

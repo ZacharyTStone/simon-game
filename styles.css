@@ -76,6 +76,15 @@ hr {
   background-color: grey;
 }
 
+.black-circle {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  left: 500px;
+}
+
 .hidden {
   visibility: hidden;
 }

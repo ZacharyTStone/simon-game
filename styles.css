@@ -3,6 +3,11 @@ body {
   background-color: #011F3F;
 }
 
+.game-viewport {
+  width: 100%vw;
+  height: 100%vh;
+}
+
 hr {
   border: none;
   border-top: 5px dashed #f00;
@@ -51,7 +56,7 @@ hr {
 }
 
 .game-over {
-  background-color: red;
+  background-color: rgb(131, 12, 12);
   opacity: 0.8;
 }
 

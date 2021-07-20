@@ -85,6 +85,7 @@ hr {
   left: 500px;
 }
 
+/* hides and takes buttons out of the flow so the start button is easier to click */
 .hidden {
-  visibility: hidden;
+  display: none;
 }

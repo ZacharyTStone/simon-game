@@ -6,6 +6,11 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
+// highest high score
+let highScore = 0;
+// current high score
+let currentHighScore = -1;
+
 // game rule alert pc
 // alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they apeared");
 
@@ -52,7 +57,6 @@ function checkAnswer(currentLevel) {
 
     //3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-
         console.log("success");
 
         //4. If the user got the most recent answer right in step 3, then check that they have finished their sequence with another if statement.
@@ -102,6 +106,13 @@ function nextSequence() {
     userClickedPattern = [];
 
     level++;
+    currentHighScore++;
+    if (currentHighScore > highScore) {
+        console.log("high score is" + currentHighScore);
+        $("#high-score").html("<h3> high score <hr>" + currentHighScore + "</h3>");
+        highScore = currentHighScore;
+    };
+
     $("#level-title").text("Level " + level);
 
     var randomNumber = Math.floor(Math.random() * 4);
@@ -127,6 +138,7 @@ function animatePress(currentColor) {
 // reset game by setting all the values to what they start as 
 function startOver() {
     level = 0;
+    currentHighScore = 0;
     gamePattern = [];
     started = false;
     $(h1).removeClass("game-over");

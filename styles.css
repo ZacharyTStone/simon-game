@@ -31,6 +31,7 @@ hr {
   display: inline-block;
   width: 100%;
   margin: auto;
+  height: auto;
 
 }
 
@@ -52,6 +53,10 @@ hr {
   font-family: 'Press Start 2P', cursive;
   margin: 25px;
 
+}
+
+.score-button {
+  height: auto;
 }
 
 .btn-row {

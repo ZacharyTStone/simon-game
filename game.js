@@ -1,23 +1,23 @@
-var buttonColors = ["red", "blue", "green", "yellow"];
+const buttonColors = ["red", "blue", "green", "yellow"];
 
-var gamePattern = [];
-var userClickedPattern = [];
-
-var started = false;
-var level = 0;
+let gamePattern = [];
+let userClickedPattern = [];
+// 
+let started = false;
+let level = 0;
 
 // game rule alert pc
 // alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they apeared");
 
-// game rule alert
-onload = function () {
-    var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-    if (mobile) {
-        alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they appeared");
-    } else {
-        alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they appeared")
-    }
-}
+// game rule alert set to also run on mobile
+// onload = function () {
+//     const mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+//     if (mobile) {
+//         alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they appeared");
+//     } else {
+//         alert("Hi there!\n\nStart the game by clicking on the start/reset button.\n\nFor each new level press the previous colors in the order they appeared")
+//     }
+// }
 
 
 // starts the game with a button click and unhides
